@@ -1,0 +1,35 @@
+.wrapper {
+    display: grid;
+    max-width: 960px;
+    margin: 20px auto 30px;
+    grid-template-areas: 'image title' 'image description' 'image button';
+    grid-template-columns: auto 1fr;
+    background-color: #ececec;
+}
+
+.image {
+    grid-area: image;
+    width: 150px;
+    align-self: center;
+}
+
+.title {
+    grid-area: title;
+    margin: 10px 25px 8px;
+    font-size: x-large;
+}
+
+.description {
+    grid-area: description;
+    margin: 10px 25px 8px;
+    font-size: small;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: #11112f;
+    color: white;
+    margin: 10px 25px;
+    max-width: 140px;
+    height: 35px;
+}
