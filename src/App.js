@@ -1,4 +1,5 @@
 import React from 'react'
+import SingleShow from './components/single-show'
 
 class App extends React.Component {
   constructor(props) {
@@ -27,16 +28,6 @@ class App extends React.Component {
       </div>
     )
   }
-}
-
-const SingleShow = (props) => {
-  return (
-    <div>
-      <img src={props.image} alt='' />
-      <h3>{props.title}</h3>
-      <div dangerouslySetInnerHTML={{ __html: props.description }} />
-    </div>
-  )
 }
 
 export default App;
