@@ -23,8 +23,8 @@ const SearchShows = () => {
 
   return (
     <Layout heading='This is the search page.'>
-      <div className='show-listing'>
         <h1>Search results for: {query}</h1>
+      <div className='show-listing'>
       {
         shows.map(show => {
           if (show.show.image === null) {

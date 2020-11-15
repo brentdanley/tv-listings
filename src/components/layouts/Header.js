@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <header>This is the header.</header>
+        <header>
+            <Link to="/">Home</Link>
+        </header>
     )
 }
 

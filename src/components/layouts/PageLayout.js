@@ -10,8 +10,8 @@ const PageLayout = (props) => {
         <div>
             <Header />
             <div className={styles.contentWrapper}>
-                <SearchShowsForm />
                 <h1>{props.heading}</h1>
+                <SearchShowsForm />
                 {props.children}
             </div>
             <Footer />
