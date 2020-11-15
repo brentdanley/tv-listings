@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router'
 import SingleShow from '../single-show'
 
-
-const useQuery = () => {
-  return new URLSearchParams(useLocation().search)
-}
-  
 const App = () => {
   const [shows, setShows] = useState([])
 
   let history = useHistory()
+
+  const useQuery = () => {
+    return new URLSearchParams(useLocation().search)
+  }
   let query = useQuery().get('q')
 
   useEffect(() => {
@@ -33,6 +32,7 @@ const App = () => {
         <button onClick={() => SubmitForm(document.getElementById('searchTerm').value)}>Get shows</button>
       </div>
       <div className='show-listing'>
+        <h1>Search results for: {query}</h1>
       {
         shows.map(show => {
           if (show.show.image === null) {
