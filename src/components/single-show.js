@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from './single-show.module.css'
+import styles from './single-show.module.scss'
 
 const SingleShow = (props) => {
   return (

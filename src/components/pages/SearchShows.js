@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useHistory, useLocation } from 'react-router'
+import { useLocation } from 'react-router-dom'
+
+import Layout from '../layouts/PageLayout'
 import SingleShow from '../single-show'
 
-const App = () => {
+const SearchShows = () => {
   const [shows, setShows] = useState([])
-
-  let history = useHistory()
 
   const useQuery = () => {
     return new URLSearchParams(useLocation().search)
@@ -21,16 +21,8 @@ const App = () => {
       )
   }, [shows])
 
-  const SubmitForm = (data) => {
-    history.push(`/search/shows/?q=${data}`)
-  }
-
   return (
-    <div>
-      <div>
-        <input id="searchTerm" placeholder="Search term"></input>
-        <button onClick={() => SubmitForm(document.getElementById('searchTerm').value)}>Get shows</button>
-      </div>
+    <Layout heading='This is the search page.'>
       <div className='show-listing'>
         <h1>Search results for: {query}</h1>
       {
@@ -44,8 +36,8 @@ const App = () => {
         })
       }
       </div>
-    </div>
+    </Layout>
   )
 }
 
-export default App;
+export default SearchShows;
