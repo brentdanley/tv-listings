@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from './components/layouts/PageLayout'
 import SingleShow from './components/single-show'
 
 class App extends React.Component {
@@ -41,7 +42,7 @@ class App extends React.Component {
   
     const shows = this.state.shows;
     return (
-      <div>
+      <Layout heading='Brent is awesome.'>
         <header>
           <h1>Brent's Cool Show Listings</h1>
           <form onSubmit={this.handleSubmit}>
@@ -59,7 +60,7 @@ class App extends React.Component {
           ))
         }
         </div>
-      </div>
+      </Layout>
     )
   }
 }

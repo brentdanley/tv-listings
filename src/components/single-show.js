@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './single-show.module.css'
+import styles from './single-show.module.scss'
 
 const SingleShow = (props) => {
   return (
