@@ -1,8 +1,8 @@
 .wrapper {
     display: grid;
-    grid-template-areas: 'poster episodes' 'summary episodes';
+    grid-template-areas: 'heading heading' 'poster episodes' 'rating episodes' 'summary episodes';
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 300px auto;
+    grid-template-rows: 67px 300px 24px auto;
 }
 
 .poster {
@@ -15,4 +15,16 @@
 
 .episodeList {
     grid-area: episodes;
+}
+
+.rating {
+    grid-area: rating;
+}
+
+.heading {
+    grid-area: heading;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    color: #327ec5;
 }

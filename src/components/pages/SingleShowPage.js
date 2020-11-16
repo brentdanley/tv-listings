@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import Layout from '../layouts/PageLayout'
 import EpisodeList from '../EpisodeList'
+import Rating from '../Rating'
 
 import styles from './SingleShowPage.module.scss'
 
@@ -23,6 +24,8 @@ const SingleShow = () => {
     return (
         <Layout heading={show.name}>
             <div className={styles.wrapper}>
+                <h2 className={styles.heading}>{show.name}</h2>
+                <Rating rating={(show.rating !== undefined) ? show.rating.average * 10 : 0} className={styles.rating} />
                 {(show.image !== null) ?
                 <img src={show.image.medium} alt={`${show.name} poster`} className={styles.poster} />
                 :
