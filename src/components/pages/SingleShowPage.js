@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 import Layout from '../layouts/PageLayout'
 import EpisodeList from '../EpisodeList'
 
+import styles from './SingleShowPage.module.scss'
+
 const SingleShow = () => {
     const [show, setShow] = useState({image: ''})
 
@@ -20,9 +22,11 @@ const SingleShow = () => {
 
     return (
         <Layout heading={show.name}>
-            <img src={show.image.medium} alt={`${show.name} poster`} />
-            <div dangerouslySetInnerHTML={{ __html: show.summary}}></div>
-            <EpisodeList showID={show.id} />
+            <div className={styles.wrapper}>
+                <img src={show.image.medium} alt={`${show.name} poster`} className={styles.poster} />
+                <div dangerouslySetInnerHTML={{ __html: show.summary}} className={styles.summary}></div>
+                <EpisodeList showID={show.id} className={styles.episodeList} />
+            </div>
         </Layout>
     )
 }

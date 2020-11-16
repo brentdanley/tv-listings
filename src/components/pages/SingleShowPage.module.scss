@@ -1,0 +1,18 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: 'poster episodes' 'summary episodes';
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 300px auto;
+}
+
+.poster {
+    grid-area: poster;
+}
+
+.summary {
+    grid-area: summary;
+}
+
+.episodeList {
+    grid-area: episodes;
+}
