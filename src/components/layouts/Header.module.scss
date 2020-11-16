@@ -1,0 +1,29 @@
+header {
+    background-color: #327ec5;
+    padding: 15px;
+
+    .wrapper {
+        max-width: 1020px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-template-areas: 'links title';
+        align-items: center;
+
+        .links {
+            grid-area: links;
+            color: white;
+        }
+
+        .pageTitle {
+            grid-area: title;
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

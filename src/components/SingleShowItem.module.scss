@@ -1,26 +1,20 @@
 .wrapper {
     display: grid;
-    max-width: 960px;
-    margin: 20px auto 30px;
-    grid-template-areas: 'image title' 'image description' 'image button';
-    grid-template-columns: auto 1fr;
+    grid-template-areas: 'image' 'title' 'description' 'button';
+    grid-template-rows: max-content min-content 1fr min-content;
     background-color: #ececec;
-}
-
-.wrapper {
-    width: 100%;
-    overflow: hidden;
+    margin: 8px;
 }
 
 .image {
     grid-area: image;
-    width: 150px;
+    width: 100%;
     align-self: center;
 }
 
 .title {
     grid-area: title;
-    margin: 10px 25px 8px;
+    margin: 10px auto;
     font-size: x-large;
 }
 
@@ -33,8 +27,12 @@
 .button {
     border-radius: 5px;
     background-color: #11112f;
-    color: white;
-    margin: 10px 25px;
+    margin: 10px auto;
     max-width: 140px;
     height: 35px;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }

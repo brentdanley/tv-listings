@@ -1,6 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
+import styles from './SearchShowsForm.module.scss'
+
 const SearchShowsForm = () => {
 
     let history = useHistory()
@@ -10,9 +12,9 @@ const SearchShowsForm = () => {
     }
 
     return (
-      <div>
-        <input id="searchTerm" placeholder="Search term"></input>
-        <button onClick={() => SubmitForm(document.getElementById('searchTerm').value)}>Get shows</button>
+      <div className={styles.form}>
+        <input id="searchTerm" placeholder="Search term" className={styles.field}></input>
+        <button onClick={() => SubmitForm(document.getElementById('searchTerm').value)} className={styles.button}>Find shows</button>
     </div>
     )
 }

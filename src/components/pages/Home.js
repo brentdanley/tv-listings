@@ -3,7 +3,7 @@ import Layout from '../layouts/PageLayout'
 
 const Home = () => {
     return (
-        <Layout heading='This is the homepage.'>
+        <Layout heading='Home'>
             Go search something...
         </Layout>
     )

@@ -8,9 +8,8 @@ import styles from './PageLayout.module.scss'
 const PageLayout = (props) => {
     return (
         <div>
-            <Header />
+            <Header heading={props.heading} />
             <div className={styles.contentWrapper}>
-                <h1>{props.heading}</h1>
                 <SearchShowsForm />
                 {props.children}
             </div>
