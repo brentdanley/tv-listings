@@ -8,7 +8,7 @@ const EpisodeList = (props) => {
 
     const fetchEpisodes = async () => {
 
-        const apiCall = await fetch(`http://api.tvmaze.com/shows/${props.showID}/episodes`)
+        const apiCall = await fetch(`https://api.tvmaze.com/shows/${props.showID}/episodes`)
         const response = await apiCall.json()
         setEpisodes(response)
     }
