@@ -23,7 +23,11 @@ const SingleShow = () => {
     return (
         <Layout heading={show.name}>
             <div className={styles.wrapper}>
+                {(show.image !== null) ?
                 <img src={show.image.medium} alt={`${show.name} poster`} className={styles.poster} />
+                :
+                ''
+                }
                 <div dangerouslySetInnerHTML={{ __html: show.summary}} className={styles.summary}></div>
                 <EpisodeList showID={show.id} className={styles.episodeList} />
             </div>
