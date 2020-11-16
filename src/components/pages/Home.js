@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../layouts/PageLayout'
 
+import styles from './Home.module.scss'
+
 const Home = () => {
     return (
-        <Layout heading='Home'>
-            <h2>TV Show Listings</h2>
-
+        <Layout heading='TV Show Listings'>
+            <img src='/images/retro_tv.jpg' alt='retro tv' className={styles.retrotv} />
             <h3>Purpose</h3>
             <p>This is an app I created to demonstrate the use of:</p>
 
