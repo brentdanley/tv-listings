@@ -8,18 +8,18 @@ const EpisodeList = (props) => {
 
     const fetchEpisodes = async () => {
 
-        const apiCall = await fetch(`https://api.tvmaze.com/shows/${props.showID}/episodes`)
+        const apiCall = await fetch(`https://api.tvmaze.com/seasons/${props.season}/episodes`)
         const response = await apiCall.json()
         setEpisodes(response)
     }
 
-    useEffect(() => { fetchEpisodes() }, [props.showID])
+    useEffect(() => { fetchEpisodes() }, [props.season])
 
     return (
         <div className={props.className}>
             {episodes.map(episode => {
                 return (
-                    <EpisodeListItem {...episode} />
+                    <EpisodeListItem {...episode} key={episode.id} />
                 )
             })}
         </div>

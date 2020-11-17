@@ -1,0 +1,14 @@
+.button {
+    display: inline-block;
+    background-color: rgb(104, 179, 192);
+    margin: 3px 5px 3px 0;
+    padding: 13px 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+        font-weight: bold;
+
+    &.active {
+        background-color: #2e75e0;
+    }
+}
