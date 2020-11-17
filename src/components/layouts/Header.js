@@ -11,7 +11,7 @@ const Header = () => {
         <header>
             <div className={styles.wrapper}>
                 <div className={styles.links}>
-                    <Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
+                    <Link to="/"><FontAwesomeIcon icon={faHome} /></Link>
                 </div>
                 <h1 className={styles.pageTitle}>TV Junkies</h1>
             </div>

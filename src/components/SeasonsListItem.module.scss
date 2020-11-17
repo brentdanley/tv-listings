@@ -6,7 +6,8 @@
     border-radius: 8px;
     color: white;
     text-align: center;
-        font-weight: bold;
+    font-weight: bold;
+    cursor: pointer;
 
     &.active {
         background-color: #2e75e0;
