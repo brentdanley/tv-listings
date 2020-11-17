@@ -6,14 +6,14 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './Header.module.scss'
 
-const Header = (props) => {
+const Header = () => {
     return (
         <header>
             <div className={styles.wrapper}>
                 <div className={styles.links}>
                     <Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
                 </div>
-                <h1 className={styles.pageTitle}>{props.heading}</h1>
+                <h1 className={styles.pageTitle}>TV Junkies</h1>
             </div>
         </header>
     )
