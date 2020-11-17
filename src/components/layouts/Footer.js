@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <div className={styles.wrapper}>
-                <div>Visit <a href='https://brentdanley.codes' target='_blank' rel='noreferrer' title='Brent Danley&quot; programming portfolio.'>Brent's Coding Portfolio</a></div>
+                <div>Visit <a href='https://brentdanley.codes' target='_blank' rel='noreferrer' title="Brent Danley's programming portfolio.">Brent's Coding Portfolio</a></div>
                 <div className={styles.contact}>
                     <p>&copy; {new Date().getFullYear()}</p>
                     <p><strong>Brent Danley</strong><br />
