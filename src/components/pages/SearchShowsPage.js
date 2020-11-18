@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import Layout from '../layouts/PageLayout'
 import SingleShowItem from '../SingleShowItem'
@@ -25,6 +26,9 @@ const SearchShows = () => {
 
   return (
     <Layout heading='Search for a show'>
+      <Helmet>
+          <title>Search for {query} - Brent Danley Codes</title>
+      </Helmet>
       <div className={styles.showListings}>
       {
         shows.map(show => {
