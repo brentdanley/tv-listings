@@ -16,7 +16,7 @@ const EpisodeList = (props) => {
     useEffect(() => { fetchEpisodes() }, [props.season])
 
     return (
-        <div className={props.className}>
+        <div className={`${props.className} ${styles.wrapper}`}>
             {episodes.map(episode => {
                 return (
                     <EpisodeListItem {...episode} key={episode.id} />

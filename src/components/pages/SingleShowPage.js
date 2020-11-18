@@ -30,12 +30,12 @@ const SingleShow = () => {
                 <title>{show.name} - Brent Danley Codes</title>
             </Helmet>
             <div className={styles.wrapper}>
+                {(show.image !== null) ?
+                <img src={show.image.medium} alt={`${show.name} poster`} className={styles.poster} />
+                :
+                ''
+                }
                 <div className={styles.showMeta}>
-                    {(show.image !== null) ?
-                    <img src={show.image.medium} alt={`${show.name} poster`} className={styles.poster} />
-                    :
-                    ''
-                    }
                     <h2 className={styles.heading}>{show.name}</h2>
                     <Rating rating={(show.rating !== undefined) ? show.rating.average * 10 : 0} className={styles.rating} />
                     <div dangerouslySetInnerHTML={{ __html: show.summary}} className={styles.summary}></div>
