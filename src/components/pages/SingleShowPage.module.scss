@@ -1,14 +1,22 @@
+$mobile: 600px;
+
 .wrapper {
     display: grid;
-    grid-template-areas: 'meta episodes';
-    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'poster meta' 'episodes episodes';
+    grid-template-columns: 1fr;
     grid-gap: 15px;
+
+    @media only screen and (max-width: $mobile) {
+        grid-template-areas: 'poster' 'meta' 'episodes';
+        margin: 0 15px 20px;
+    }
 }
 
 .showMeta {
     grid-area: meta;
 }
 .poster {
+    grid-area: poster;
 }
 
 .summary {

@@ -1,4 +1,19 @@
+$mobile: 600px;
+
+.wrapper {
+
+    @media only screen and (max-width: $mobile) {
+        margin: 0 15px 20px;
+    }
+}
+
 .retrotv {
+    display: block;
     float: right;
     max-width: 350px;
+
+    @media only screen and (max-width: $mobile) {
+        float: none;
+        margin: 0 auto;
+    }
 }

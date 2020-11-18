@@ -18,6 +18,7 @@ const SeasonsList = (props) => {
 
     return (
         <div className={`${props.className} ${styles.wrapper}`}>
+            <div className={styles.title}>Seasons:</div> 
             {seasons.map(season => {
                 return (
                     <SeasonsListItem {...season} season={props.activeSeason} setSeason={props.setSeason} key={season.id} />
