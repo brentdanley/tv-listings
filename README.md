@@ -20,4 +20,4 @@ This is an app I created to demonstrate the use of:</p>
 
 To view other demo projects, visit my online [portfolio](https://brentdanley.codes/portfolio).  
 
-If you'd like to hire me to be an integral part of your team, have a look at my [resume](https://brentdanley.codes/resume/), then contact me at [tel:207-423-7145]((207) 423-7145) or send an email to [brentdanley@gmail.com](mailto:brentdanley@gmail.com).
+If you'd like to hire me to be an integral part of your team, have a look at my [resume](https://brentdanley.codes/resume/), then contact me at (207) 423-7145 or send an email to [brentdanley@gmail.com](mailto:brentdanley@gmail.com).
