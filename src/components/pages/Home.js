@@ -20,6 +20,7 @@ const Home = () => {
                 <li>Responsive CSS Grid</li>
                 <li>Modular Sass</li>
                 <li>JavaScript Fetch API with async/await</li>
+                <li>Helmet to inject meta into the &lt;head&gt;</li>
                 </ul>
 
                 <h3>Code</h3>

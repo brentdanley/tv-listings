@@ -1,28 +1,23 @@
-## TV Listings
-Using an npm starter application such as “create-react-app”
+# TV Junkies
 
-Create an interface that has an input that will search the TV Maze API
+![Retro TV](./public/images/retro_tv.jpg)
 
-[TVmaze API](http://www.tvmaze.com/api)
+## Purpose
+                
+This is an app I created to demonstrate the use of:</p>
 
-[TVmaze API Example - https://api.tvmaze.com/search/shows?q=walking](https://api.tvmaze.com/search/shows?q=walking)
+- React
+- React Router
+- React Hooks
+- Local state management with the React Hook API
+- Accessing URL parameters
+- Responsive CSS Grid
+- Modular Sass
+- JavaScript Fetch API with async/await
+- Helmet to inject meta into the &lt;head&gt;
 
-Then, display the results matching the design provided.
+## Contact
 
-Success is:
-- The initial page will have a text input and button.
-- Successfully make the api call
-- Display the results in a view that is human readable.
+To view other demo projects, visit my online [portfolio](https://brentdanley.codes/portfolio).  
 
-Extra:
-If time allows feel free to add anything additional that you would like to highlight.
-For example:
-- Tests
-- Interactions to click a show and get a list of episodes
-
-[TVmaze](https://tvmaze.com)
-
-Add television information to your own website or app with a fast and clean TV API. Add schedules, show, episode, cast information, 
-
-![Show Listing Example](./public/images/image006.png)
-![Episode Listing Example](./public/images/image005.png)
+If you'd like to hire me to be an integral part of your team, have a look at my [resume](https://brentdanley.codes/resume/), then contact me at [tel:207-423-7145]((207) 423-7145) or send an email to [brentdanley@gmail.com](mailto:brentdanley@gmail.com).
