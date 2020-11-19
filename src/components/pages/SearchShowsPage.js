@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import Layout from '../layouts/PageLayout'
+import SearchForm from '../SearchShowsForm'
 import SingleShowItem from '../SingleShowItem'
 import SingleShowItemNoImage from '../SingleShowItemNoImage'
 
@@ -9,22 +10,19 @@ import styles from './SearchShows.module.scss'
 
 const SearchShows = () => {
   const [shows, setShows] = useState([])
-
-  const useQuery = () => {
-    return new URLSearchParams(useLocation().search)
-  }
-  let query = useQuery().get('q')
+  const [searchTerm, setSearchTerm] = useState(new URLSearchParams(useLocation().search).get('q'))
 
   const fetchShows = async () => {
-    const apiCall = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
+    const apiCall = await fetch(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
     const response = await apiCall.json()
     setShows(response)
   }
 
-  useEffect(() => { fetchShows() }, [])
+  useEffect(() => { fetchShows() }, [searchTerm])
 
   return (
-    <Layout heading='Search for a show'>
+    <Layout>
+      <SearchForm updateSearch={setSearchTerm} />
       <div className={styles.showListings}>
       {
         shows.map(show => {

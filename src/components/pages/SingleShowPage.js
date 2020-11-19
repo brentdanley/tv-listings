@@ -24,7 +24,7 @@ const SingleShow = () => {
     useEffect(() => { fetchShow() }, [])
 
     return (
-        <Layout heading={show.name}>
+        <Layout>
             <div className={styles.wrapper}>
                 {(show.image !== null) ?
                 <img src={show.image.medium} alt={`${show.name} poster`} className={styles.poster} />

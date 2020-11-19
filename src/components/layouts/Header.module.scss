@@ -6,8 +6,8 @@ header {
         max-width: 1020px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: max-content 1fr;
-        grid-template-areas: 'links title';
+        grid-template-columns: max-content min-content 1fr;
+        grid-template-areas: 'links search title';
         align-items: center;
 
         .links {
@@ -20,6 +20,13 @@ header {
             grid-area: title;
             color: white;
             text-align: center;
+        }
+
+        .searchIcon {
+            grid-area: search;
+            color: white;
+            cursor: pointer;
+            margin-left: 7px;
         }
     }
 }

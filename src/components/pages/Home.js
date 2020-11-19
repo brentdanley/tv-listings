@@ -1,5 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Layout from '../layouts/PageLayout'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './Home.module.scss'
 
@@ -34,6 +37,7 @@ const Home = () => {
                 <p>If you'd like to hire me to be an integral part of your team, have a look at my <a href="https://brentdanley.codes/resume/">resume</a>, then contact me at <a href="tel:207-423-7145">(207) 423-7145</a> or send an email to <a href="mailto:brentdanley@gmail.com">brentdanley@gmail.com</a>.</p>
 
                 <p>Now go ahead and search for a show!</p>
+                <Link to='/search/shows/' className={styles.searchButton}><FontAwesomeIcon icon={faSearch} /> Search for a show</Link>
             </div>
         </Layout>
     )
