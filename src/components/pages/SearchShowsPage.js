@@ -11,7 +11,7 @@ import styles from './SearchShows.module.scss'
 
 const SearchShows = () => {
   const [shows, setShows] = useState([])
-  const [searchTerm, setSearchTerm] = useState(new URLSearchParams(useLocation().search).get('q'))
+  const [searchTerm, setSearchTerm] = useState('job')
 
   const fetchShows = async () => {
     const apiCall = await fetch(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
@@ -24,7 +24,7 @@ const SearchShows = () => {
   return (
     <Layout>
       <Helmet>
-          <title>Search for {query} - Brent Danley Codes</title>
+          <title>Search for {searchTerm} - Brent Danley Codes</title>
       </Helmet>
       <SearchForm updateSearch={setSearchTerm} />
       <div className={styles.showListings}>
