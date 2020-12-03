@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import Layout from '../layouts/PageLayout'
 import SeasonsList from '../SeasonsList'
@@ -9,7 +10,7 @@ import Rating from '../Rating'
 import styles from './SingleShowPage.module.scss'
 
 const SingleShow = () => {
-    const [show, setShow] = useState({image: ''})
+    const [show, setShow] = useState({name: '',image: ''})
     const [season, setSeason] = useState('')
 
     let { show_id } = useParams()
@@ -25,6 +26,9 @@ const SingleShow = () => {
 
     return (
         <Layout>
+            <Helmet>
+                <title>{show.name} - Brent Danley Codes</title>
+            </Helmet>
             <div className={styles.wrapper}>
                 {(show.image !== null) ?
                 <img src={show.image.medium} alt={`${show.name} poster`} className={styles.poster} />

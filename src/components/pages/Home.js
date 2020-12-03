@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../layouts/PageLayout'
+import Helmet from 'react-helmet'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -9,6 +11,9 @@ import styles from './Home.module.scss'
 const Home = () => {
     return (
         <Layout>
+            <Helmet>
+                <title>Home - Brent Danley Codes</title>
+            </Helmet>
             <div className={styles.wrapper}>
                 <img src='/images/retro_tv.jpg' alt='retro tv' className={styles.retrotv} />
                 <h3>Purpose</h3>

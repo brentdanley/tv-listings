@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import Layout from '../layouts/PageLayout'
 import SearchForm from '../SearchShowsForm'
@@ -22,6 +23,9 @@ const SearchShows = () => {
 
   return (
     <Layout>
+      <Helmet>
+          <title>Search for {query} - Brent Danley Codes</title>
+      </Helmet>
       <SearchForm updateSearch={setSearchTerm} />
       <div className={styles.showListings}>
       {
