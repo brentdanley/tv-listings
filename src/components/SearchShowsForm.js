@@ -3,12 +3,13 @@ import { useHistory } from 'react-router-dom'
 
 import styles from './SearchShowsForm.module.scss'
 
-const SearchShowsForm = () => {
+const SearchShowsForm = (props) => {
 
     let history = useHistory()
 
     const SubmitForm = (data) => {
         history.push(`/search/shows/?q=${data}`)
+        props.updateSearch(data)
     }
 
     return (
